@@ -12,15 +12,19 @@ import { AppComponent } from './app.component';
 import { HijoComponent } from './contador/hijo/hijo.component';
 import { NietoComponent } from './contador/nieto/nieto.component';
 import { environment } from '../environments/environment.prod';
+import { TodoModule } from './todo/todo.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HijoComponent,
-    NietoComponent
+    NietoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
+    TodoModule,
     StoreModule.forRoot({ contador: contadorReducer }),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
