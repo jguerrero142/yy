@@ -25,3 +25,7 @@ export const toggleAll = createAction(
     '[TODO] Completado todo',
     props<{ completado: boolean }>()
 );
+
+export const limpiarTodo = createAction(
+    '[TODO] Limpiar Todos'
+)

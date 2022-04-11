@@ -11,8 +11,8 @@ export class FiltroPipe implements PipeTransform {
     switch(filtro){
       case 'completados':
         return todos.filter(todo => todo.completado);
-      case 'completados':
-      return todos.filter(todo => todo.completado);
+      case 'pendientes':
+      return todos.filter(todo => !todo.completado);
 
       default: 
       return todos;
